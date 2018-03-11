@@ -1,0 +1,26 @@
+
+#Datasource configuration info
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        default_schema: public
+    hibernate:
+      ddl-auto: none
+
+bot:
+  token:
+  username:
+
+flyway:
+  schemas: public
+  baseline-on-migrate: true
+  sql-migration-prefix: local
+  locations: db.local
+  enabled: false
